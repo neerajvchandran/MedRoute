@@ -5,6 +5,7 @@ import { useNavigate, Link } from 'react-router-dom';
 export default function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [loginRole, setLoginRole] = useState('patient');
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
   const { login, currentUser, userRole } = useAuth();
@@ -23,7 +24,7 @@ export default function Login() {
     try {
       setError('');
       setLoading(true);
-      await login(email, password);
+      await login(email, password, loginRole);
     } catch (err) {
       setError('Failed to log in: ' + err.message);
     } finally {
@@ -37,6 +38,10 @@ export default function Login() {
         <h2 style={{textAlign: 'center', marginBottom: '1.5rem'}}>Sign In</h2>
         {error && <div style={{color: 'var(--accent-red)', marginBottom: '1rem', textAlign: 'center', fontSize: '0.9rem'}}>{error}</div>}
         <form onSubmit={handleSubmit} style={{display: 'flex', flexDirection: 'column', gap: '1rem'}}>
+          <select value={loginRole} onChange={e => setLoginRole(e.target.value)} disabled={loading}>
+            <option value="patient">Login as Patient</option>
+            <option value="driver">Login as Driver</option>
+          </select>
           <input type="email" placeholder="Email" required value={email} onChange={e => setEmail(e.target.value)} disabled={loading} />
           <input type="password" placeholder="Password" required value={password} onChange={e => setPassword(e.target.value)} disabled={loading} />
           <button type="submit" className="btn-primary" style={{marginTop: '0.5rem'}} disabled={loading}>

@@ -38,11 +38,11 @@ export function AuthProvider({ children }) {
     setUserRole(data.role);
   };
 
-  async function login(email, password) {
+  async function login(email, password, loginRole) {
     const res = await fetch(`${API_URL}/login`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ email, password })
+      body: JSON.stringify({ email, password, loginRole })
     });
     const data = await res.json();
     if (!res.ok) throw new Error(data.error);

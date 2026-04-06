@@ -4,7 +4,6 @@ import Signup from './pages/Signup';
 import ProtectedRoute from './components/ProtectedRoute';
 import PatientDashboard from './pages/patient/PatientDashboard';
 import DriverDashboard from './pages/driver/DriverDashboard';
-import HospitalDashboard from './pages/hospital/HospitalDashboard';
 
 function App() {
   return (
@@ -15,7 +14,6 @@ function App() {
         <Route path="/signup" element={<Signup />} />
         <Route path="/patient/*" element={<ProtectedRoute allowedRoles={['patient']}><PatientDashboard /></ProtectedRoute>} />
         <Route path="/driver/*" element={<ProtectedRoute allowedRoles={['driver']}><DriverDashboard /></ProtectedRoute>} />
-        <Route path="/hospital/*" element={<ProtectedRoute allowedRoles={['hospital', 'admin']}><HospitalDashboard /></ProtectedRoute>} />
       </Routes>
     </div>
   );
