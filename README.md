@@ -2,7 +2,7 @@
 
 MedRoute is a sophisticated, real-time emergency dispatch platform designed to bridge the gap between patients and ambulance services using intelligent routing and predictive traffic analysis.
 
-## 📺 Application Demo
+## Application Demo
 
 <div align="center">
   <video src="https://github.com/neerajvchandran/MedRoute/raw/main/media/hosted.mp4" width="100%" controls></video>
