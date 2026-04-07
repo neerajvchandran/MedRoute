@@ -2,9 +2,20 @@
 
 MedRoute is a sophisticated, real-time emergency dispatch platform designed to bridge the gap between patients and ambulance services using intelligent routing and predictive traffic analysis.
 
+## 📺 Application Demo
+
+<video src="./media/hosted.mp4" controls="controls" style="max-width: 100%; height: auto;"></video>
+
 ## Problem Statement
 
-Traditional emergency dispatch systems are fundamentally limited by their reliance on static distance-based models. These systems typically assign the geographically closest ambulance to a patient, regardless of the dynamic urban environment. This approach is prone to significant failure in modern cities where traffic congestion, unexpected road closures, and fluctuating peak-hour density can result in extended arrival times. In critical medical emergencies, such as cardiac arrests or severe trauma, every second of delay directly correlates with a decrease in survival rates. The "nearest-ambulance" approach often creates a false sense of security while ignoring the complexities of real-world transit.
+Traditional emergency dispatch systems are fundamentally limited by their reliance on static distance-based models. These systems typically assign the geographically closest ambulance to a patient, regardless of the dynamic urban environment. This approach is prone to significant failure in modern cities where traffic congestion, unexpected road closures, and fluctuating peak-hour density can result in extended arrival times. In critical medical emergencies—such as cardiac arrests or severe trauma—every second of delay directly correlates with a decrease in survival rates. The "nearest-ambulance" approach often creates a false sense of security while ignoring the complexities of real-world transit.
+
+## 🖼️ Application Screenshots
+
+![App Screen 1](./media/1.jpg)
+![App Screen 2](./media/2.jpg)
+![App Screen 3](./media/3.jpg)
+
 
 ## Our Solution: Intelligent Dispatching
 
@@ -61,6 +72,13 @@ To transition from a prototype to a mission-critical emergency system, the follo
 - **Predictive AI Reasoning**: Uses Google Gemini AI to analyze environmental factors (time of day, traffic levels, route types) to predict dynamic delays and offer more accurate arrival times.
 - **Custom Authentication**: Secure JWT-based authentication system with password hashing, replacing standard serverless solutions for greater flexibility and control.
 
+## 🤖 Developed with Antigravity AI
+
+MedRoute was architected and developed with the assistance of **Antigravity AI**, a powerful agentic AI coding assistant from Google Deepmind.
+
+![Antigravity AI Proof](./media/proof.jpg)
+
+
 ## Technology Stack
 
 - **Frontend**: React.js 19, Vite, React Router DOM 7, Vanilla CSS3 (Glassmorphism design).
@@ -108,4 +126,3 @@ The application is architected for split-hosting environments to ensure optimal 
 ## Security Notice
 
 The `.env` file is excluded from version control via `.gitignore`. In a production environment, all environment variables must be manually configured in the project settings of the respective hosting providers (Vercel for frontend keys, Render for backend keys).
-Vercel for frontend keys, Render for backend keys).
