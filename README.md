@@ -4,9 +4,11 @@ MedRoute is a sophisticated, real-time emergency dispatch platform designed to b
 
 ## Application Demo
 
-[Watch the Demo Video on GitHub](https://github.com/neerajvchandran/MedRoute/blob/main/media/hostednew.mp4)
+[Watch the Demo Video on GitHub Player](https://github.com/neerajvchandran/MedRoute/blob/main/media/hostednew.mp4)
 
-![MedRoute Application Demo Video](media/hostednew.mp4)
+<video width="100%" height="auto" controls>
+  <source src="media/hostednew.mp4" type="video/mp4">
+</video>
 
 ## Problem Statement
 
